@@ -4,7 +4,37 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
-import './all.sass';
+// Emotion
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../theme'
+import { injectGlobal } from 'react-emotion'
+
+injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+  html {
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: ${theme.colors.accent2};
+    color: ${theme.colors.textLight};
+    position: relative;
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+`
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
@@ -25,22 +55,20 @@ const Navbar = () => (
         </Link>
       </div>
       <div className="navbar-end">
-        <a className="navbar-item" href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate" target="_blank" rel="noopener noreferrer">
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
+        <h1>Hi</h1>
       </div>
     </div>
   </nav>
 );
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
-    <Navbar />
-    <div>{children()}</div>
-  </div>
+  <ThemeProvider theme={theme}>
+    <div>
+      <Helmet title="Home | Gatsby + Netlify CMS" />
+      <Navbar />
+      <div>{children()}</div>
+    </div>
+  </ThemeProvider>
 );
 
 TemplateWrapper.propTypes = {

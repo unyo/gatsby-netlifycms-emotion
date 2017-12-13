@@ -2,6 +2,12 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
+// Emotion
+import styled from 'react-emotion'
+
+const Section = styled('section')`
+  background-color: ${({ theme }) => theme.colors.accent1};
+`
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
@@ -21,7 +27,7 @@ export default class IndexPage extends React.Component {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     return (
-      <section className="section">
+      <Section>
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={this.handleScriptLoad.bind(this)}
@@ -52,7 +58,7 @@ export default class IndexPage extends React.Component {
             );
           })}
         </div>
-      </section>
+      </Section>
     );
   }
 }
