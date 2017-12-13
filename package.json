@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "jcd-gatsby",
+  "description": "Rebuild of jcdhomes.com with GatsbyJS and NetlifyCMS",
   "version": "1.0.0",
-  "author": "Austin Green",
+  "author": "Jason Carrick",
   "dependencies": {
     "emotion": "^8.0.12",
     "emotion-theming": "^8.0.12",
@@ -17,10 +17,6 @@
     "react-emotion": "^8.0.12",
     "react-load-script": "0.0.6"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "npm run build:cms && npm run build:site",

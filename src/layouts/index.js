@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
-import github from '../img/github-icon.svg';
-import logo from '../img/logo.svg';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import github from '../img/github-icon.svg'
+import logo from '../img/logo.svg'
 // Emotion
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../theme'
@@ -59,20 +59,20 @@ const Navbar = () => (
       </div>
     </div>
   </nav>
-);
+)
 
 const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
     <div>
-      <Helmet title="Home | Gatsby + Netlify CMS" />
+      <Helmet title="Home | JCD - Custom Home Design" />
       <Navbar />
       <div>{children()}</div>
     </div>
   </ThemeProvider>
-);
+)
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper
