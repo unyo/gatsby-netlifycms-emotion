@@ -1,6 +1,6 @@
 ---
 templateKey: 'contact-page'
 path: /contact
-title: Test
+title: Contact Us
 ---
-This is a test!
+Contact Us
