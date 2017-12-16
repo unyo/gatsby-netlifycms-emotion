@@ -18,20 +18,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-  # - name: "plans"
-  #   label: "Plans"
-  #   folder: "src/pages/plans"
-  #   create: true
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "plan"}
-  #     - {label: "Path", name: "path", widget: "string"}
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Publish Date", name: "date", widget: "datetime"}
-  #     - {label: "Description", name: "description", widget: "text"}
-  #     - {label: "Body", name: "body", widget: "markdown"}
-
   - name: "pages"
     label: "Pages"
     files:
@@ -40,13 +26,8 @@ collections:
         name: "home"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/"}
-          - label: "Text Section"
-            name: "text-section"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/about/about.md"
         label: "About"
         name: "about"
@@ -78,3 +59,29 @@ collections:
 #   fields:
 #     - {label: "Photo 1", name: "photo1", widget: "image"}
 #     - {label: "Photo 2", name: "photo2", widget: "image"}
+
+# - name: "plans"
+#   label: "Plans"
+#   folder: "src/pages/plans"
+#   create: true
+#   slug: "{{slug}}"
+#   fields:
+#     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "plan"}
+#     - {label: "Path", name: "path", widget: "string"}
+#     - {label: "Title", name: "title", widget: "string"}
+#     - {label: "Publish Date", name: "date", widget: "datetime"}
+#     - {label: "Description", name: "description", widget: "text"}
+#     - {label: "Body", name: "body", widget: "markdown"}
+
+# - file: "src/pages/index.md"
+#   label: "Home"
+#   name: "home"
+#   fields:
+#     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+#     - {label: "Path", name: "path", widget: "hidden", default: "/"}
+#     - label: "Text Section"
+#       name: "text-section"
+#       widget: "object"
+#       fields:
+#         - {label: "Title", name: "title", widget: "string"}
+#         - {label: "Text", name: "text", widget: "text"}
