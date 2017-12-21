@@ -1,5 +1,5 @@
 import React from 'react'
-import Script form 'react-load-script'
+import Script from 'react-load-script'
 
 export const IndexPageTemplate = ({ data }) => (
   <pre>{JSON.stringify(data, null, 4)}</pre>
@@ -29,6 +29,7 @@ export default class IndexPage extends React.Component {
         />
         <IndexPageTemplate data={data} />
       </section>
+    )
   }
 }
 
