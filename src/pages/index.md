@@ -1,7 +1,7 @@
 ---
 path: /
-text-section:
-  text: This is the home page
-  title: Home Page
+textSection:
+  heading: Home Page
+  text: This is the home page.  This is some text and a title in a text section
 ---
 
