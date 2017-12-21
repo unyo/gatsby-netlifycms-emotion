@@ -1,4 +1,7 @@
 ---
 path: /
-title: Home Page
+text-section:
+  text: This is the home page
+  title: Home Page
 ---
+
