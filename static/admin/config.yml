@@ -25,12 +25,12 @@ collections:
         label: "Home"
         name: "home"
         fields:
-          - {label: "Path", name: "path", widget: "hidden", default: "/"}
+          - {label: "Path", name: "path", widget: "hidden", default: "index"}
           - label: "Text Section"
-            name: "text-section"
+            name: "textSection"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Text", name: "text", widget: "text"}
       - file: "src/pages/contact/contact.md"
         label: "Contact"
@@ -48,29 +48,3 @@ collections:
           - {label: "Path", name: "path", widget: "hidden", default: "/about"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-
-
-# - label: "Tiles"
-#   name: "tiles"
-#   widget: "object"
-#   fields:
-#     - {label: "Photo 1", name: "photo1", widget: "image"}
-#     - {label: "Photo 2", name: "photo2", widget: "image"}
-
-# - name: "plans"
-#   label: "Plans"
-#   folder: "src/pages/plans"
-#   create: true
-#   slug: "{{slug}}"
-#   fields:
-#     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "plan"}
-#     - {label: "Path", name: "path", widget: "string"}
-#     - {label: "Title", name: "title", widget: "string"}
-#     - {label: "Publish Date", name: "date", widget: "datetime"}
-#     - {label: "Description", name: "description", widget: "text"}
-#     - {label: "Body", name: "body", widget: "markdown"}
-
-# - file: "src/pages/index.md"
-#   label: "Home"
-#   name: "home"
-#   fields:
