@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `JCD - Custom Home Design`
+    title: `Gatsby js | NetlifyCMS | Emotion`
   },
   plugins: [
     'gatsby-plugin-react-helmet',

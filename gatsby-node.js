@@ -17,7 +17,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               templateKey
               title
-              textSection
+              textSection {
+                heading
+                text
+              }
             }
           }
         }
