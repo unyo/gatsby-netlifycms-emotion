@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default ({ data }) => {
+export const ContactPageTemplate = ({ data }) => {
   return <pre>{JSON.stringify(data, null, 2)}</pre>
+}
+
+export default ({ data }) => {
+  return <ContactPageTemplate data={data} />
 }
 
 export const contactPageQuery = graphql`

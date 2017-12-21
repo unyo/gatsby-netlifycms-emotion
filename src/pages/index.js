@@ -1,13 +1,13 @@
 import React from 'react'
 
+export const IndexPageTemplate = ({ data }) => (
+  <pre>{JSON.stringify(data, null, 4)}</pre>
+)
+
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    return (
-      <section>
-        <pre>{JSON.stringify(data, null, 4)}</pre>
-      </section>
-    )
+    return <IndexPageTemplate data={data} />
   }
 }
 
